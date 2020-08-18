@@ -1,0 +1,29 @@
+section.subwrapper.sub-1
+  header
+    .menu
+      input#menu(type="checkbox" onchange = "check();")
+      label.menu_btn(for="menu")
+        span
+
+    .submenu
+      - var name_link;
+      each name_link in ["Who am I", "My works", "Contact"]   
+        a.sector.underline(href= name_link +".html") #{name_link}
+
+  nav.navigation
+    span EFFECTS
+    ul.nav
+      li
+        a.but(href='src/html/polygon.html') POLYGON
+      li
+        a.but(href='src/html/gradient.html') GRADIENT
+      li
+        a.but(href='src/html/transform.html') TRANSFORM
+      li
+        a.but(href='src/html/animation.html') ANIMATION
+      li
+        a.but(href='src/html/button.html') BUTTONS
+
+
+
+      

@@ -9,27 +9,47 @@ const test_pug        = require('gulp-pug');
 const plumber         = require('gulp-plumber');
 const sourcemaps      = require('gulp-sourcemaps');
 //=====================================================================
-//const BrowserSync     = require('browser-sync').create();
-//const BrowserSync_css     = require('browser-sync').create();
+const BrowserSync     = require('browser-sync').create();
+const BrowserSync_css     = require('browser-sync').create();
 //=====================================================================
 
 
+gulp.task('BrowserSync', function() {
+    browserSync.init({
+        server: {
+            baseDir: "./"
+        }
+    });
+});
+
+// or...
+
+gulp.task('BrowserSync', function() {
+    browserSync.init({
+        proxy: "localhost:8082"
+    });
+});
+
+function reload(done) {
+  BrowserSync.reload();
+  done();
+}
 //объединение файлов *.sass in style.sass
 gulp.task('concat',  () => {
    return gulp.src('../src/sass/css/*.css')
        .pipe(concat('style.css'))
-       .pipe(gulp.dest('../css'))
+       .pipe(gulp.dest('../sass/css'))
 });
 
 gulp.task('watch', () => {
-    gulp.watch('../src/sass/*.sass', ['master_sass']);
+    //gulp.watch('../src/sass/*.sass', ['master_sass']);
     gulp.watch('../src/sass/**/*.sass', ['sass']);
     gulp.watch('../src/pug/**/*.pug', ['pug']);
     gulp.watch('../test/**/*.pug', ['test_pug']);
     gulp.watch('../test/**/*.sass', ['test_sass']);
 //===================================================================    
-//    gulp.watch('../html/index.html', ['BrowserSync']);
-//    gulp.watch('../css/css.style', ['BrowserSync_css']);
+    gulp.watch('..src//html/index.html', ['BrowserSync']);
+    gulp.watch('..src/css/css.style', ['BrowserSync_css']);
 //===================================================================    
 });
 
@@ -58,11 +78,11 @@ gulp.task('sass', () => {
   return sass(['../src/sass/**/*.sass'])
     .on('error', sass.logError)
     .pipe(sourcemaps.init({loadMaps : true}))
-    .pipe(gulp.dest('../src/sass/css/'))
+    .pipe(gulp.dest('../src/css/'))
     .pipe(concat('style.css'))
     .pipe(prefixer())
-    .pipe(sourcemaps.write('../src/sass/maps/'))
-  .pipe(gulp.dest('../css'));
+    .pipe(sourcemaps.write('../sass/maps/'))
+  .pipe(gulp.dest('../src/css'));
 });
 
 gulp.task('master_sass', () => {
@@ -73,7 +93,7 @@ gulp.task('master_sass', () => {
     .pipe(sass().on('error', sass.logError))
     .pipe(concat('style.css'))
     .pipe(prefixer())
-    .pipe(gulp.dest('../css'));
+    .pipe(gulp.dest('../src/css'));
 });
 
 
