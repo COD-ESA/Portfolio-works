@@ -8,32 +8,24 @@ const pug             = require('gulp-pug');
 const test_pug        = require('gulp-pug');
 const plumber         = require('gulp-plumber');
 const sourcemaps      = require('gulp-sourcemaps');
+//const livereload      = require('gulp-livereload');
+//const connect         = require('gulp-connect');
+//const server           = livereload.createServer();
+
 //=====================================================================
 const BrowserSync     = require('browser-sync').create();
 const BrowserSync_css     = require('browser-sync').create();
 //=====================================================================
 
 
-gulp.task('BrowserSync', function() {
-    browserSync.init({
-        server: {
-            baseDir: "./"
-        }
-    });
+gulp.task('connect', function() {
+  connect.server({
+    root: '',
+    livereload: true
+  });
 });
 
-// or...
 
-gulp.task('BrowserSync', function() {
-    browserSync.init({
-        proxy: "localhost:8082"
-    });
-});
-
-function reload(done) {
-  BrowserSync.reload();
-  done();
-}
 //объединение файлов *.sass in style.sass
 gulp.task('concat',  () => {
    return gulp.src('../src/sass/css/*.css')
@@ -45,12 +37,15 @@ gulp.task('watch', () => {
     //gulp.watch('../src/sass/*.sass', ['master_sass']);
     gulp.watch('../src/sass/**/*.sass', ['sass']);
     gulp.watch('../src/pug/**/*.pug', ['pug']);
+    gulp.watch('../src/img/svg/**/*.pug', ['pug']);
     gulp.watch('../test/**/*.pug', ['test_pug']);
     gulp.watch('../test/**/*.sass', ['test_sass']);
-//===================================================================    
+    //gulp.watch('../src/sass/**/*.sass',['connect']);
+    //gulp.watch('../src/**/*.*', ['connect']);
+//===================================================================
     gulp.watch('..src//html/index.html', ['BrowserSync']);
     gulp.watch('..src/css/css.style', ['BrowserSync_css']);
-//===================================================================    
+//===================================================================
 });
 
 //запуск шаблонизатора pug
@@ -66,7 +61,7 @@ gulp.task('pug', () =>  {
   }))
   .pipe(gulp.dest('../src/html/'))
   .pipe(gulp.dest('.././index'))
-  .pipe(plumber.stop())  
+  .pipe(plumber.stop())
 });
 
 
@@ -127,7 +122,7 @@ gulp.task('test_pug', () =>  {
   }))
   .pipe(gulp.dest('../test/html/'))
   .pipe(plumber.stop());
-  console.log('End Pug');  
+  console.log('End Pug');
 });
 
 // запуск таска для разработки

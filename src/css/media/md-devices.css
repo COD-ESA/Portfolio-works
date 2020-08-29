@@ -1,0 +1,12 @@
+@media (max-width: 768px) {
+  .invise {
+    visibility: hidden; } }
+@media (min-width: 769px) {
+  .smailler-768 {
+    visibility: hidden; } }
+@media (min-width: 768px) {
+  .btn-mode {
+    height: 2.5em; } }
+@media (max-width: 768px) {
+  .mac {
+    left: 5em; } }

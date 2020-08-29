@@ -3,10 +3,9 @@ include varconf.pug
 doctype
 html
 
-
   head(lang=lang)
     block link
-      link(rel = 'stylesheet' href = path_css + "normalize.css")
+      //link(rel = 'stylesheet' href = path_css + "normalize.css")
       link(rel = 'stylesheet' href = path_css + "style.css")
 
     block metas
@@ -32,10 +31,11 @@ html
       title #{title}
     
 
-  block body
+    block body
 
-    block scripts
-  //-      script(src = path_js + "main.js" )
+      block scripts
+
+        
 
 
             

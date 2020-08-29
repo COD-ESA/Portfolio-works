@@ -6,8 +6,11 @@ var express = require('express');
 
 // создаём Express-приложение
 var app = express();
+//app.use(express.static('gulp/'));
+//app.use(express.static('gulp/node_modules/bootstrap/dist/js/'));
 app.use(express.static('src/'));
 app.use(express.static('src/html/'));
+
 
 // создаём маршрут для главной страницы
 // http://localhost:8080/

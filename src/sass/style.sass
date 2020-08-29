@@ -1,7 +1,40 @@
-@import  "import/_import.sass"
+@import "import/_import.sass"
+@font-face
+  font-family: "Titillium Web"
+  src: url('fonts/TitilliumWeb-Bold.ttf')
 
-body 
-	border: 2px solid black
+
+body
+  background-color: #E0FFFF
+
+html,body,header,#intro
+  height: 100%
+
+#intro
+  background: url(../img/pexels-photo-564899.jpeg)
+  background-size: cover
+
+.action
+  position: relative
+  top: -10vh
+  height: 10vh
+
+
+.card
+  border: none
+
+.mac
+  left: 13em
+.ipad
+  left: 41em
+  top: 7.5em
+.iphone
+  left: 16em
+  top: 15.5em
 
 
 
+
+@import "import/_link-navbar.sass"
+@import "media/md-devices.sass"
+@import "import/btn-mod.sass"

@@ -1,0 +1,8 @@
+@media (max-width: 576px) {
+  .btn-mode {
+    height: 6vh; } }
+@media (min-width: 576px) {
+  .btn-mode {
+    height: 4vh; } }
+@media (max-width: 576px) {
+  font-size: 70%; }
