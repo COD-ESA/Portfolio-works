@@ -43,36 +43,47 @@ block body
                 h2.h2-responsive.display-4.font-weight-bold.white-text.pt-5.mb-2.w-auto.col-md-8.mr-auto.ml-auto
                   | Fusce dapibus tellus ac cursus commodo.
                   | Duis mollis est non commodo luctus, nisi erat porttitor.
-                .btn.btn-outline-light.btn-lg BIG BUTTON
+                .col-3.ml-auto.mr-auto( style = { height: '15em'})
+                  button.btn-lg.btn-outline-dark BIG BUTTON
+    // close Header
 
-    .container-fluid.h-100( style = { 'background-color': '#E0E0E0'})
-      .row.col-10.d-flex.flex-row.ml-auto.mr-auto.justify-content-center.py-5
-        h2.h2-responsive.font-weight-bold.text-black.align-self-center( style = {'font-family': 'Titillium Web , sans-serif'})
-          | Call For Action Components
-      .row.col-10.d-flex.ml-auto.mr-auto.pt-2.pt-md-5.pb-md-3.bg-white.justify-content-center.text-wrap.text-truncate.h-50
-        //p.col-12.text-center.text-black.font-weight-normal.h3-responsive.pt-2
-        .card.col-12.text-center.text-black.font-weight-normal.h3-responsive.pt-2
-          .card-body
-            .card-text( style = {'font-family': 'Titillium Web , sans-serif'})
-              | Lorem Ipsum
-        p.col-md-10.text-center.text-muted.text-monospace.text-black.font-weight-normal.px-md-4.h5-responsive.display-4
-          | Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
-          |  Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-        form.col-md-7.mb-1.mb-md-2.form-inline.px-0.justify-content-center.h-25
-          .form-group.mx-sm-2.mb-2
-            label.sr-only(for='inputPassword2') Password
-            input#inputPassword2.form-control(type='password' placeholder='Enter email address')
-          button.btn-danger.mb-2.btn-mode(type='submit') SUBSCRIBE
+    .container-fluid.px-0( style = { 'background-color': '#E0E0E0;', height: '85vh'})
+      .container.h-25.mb-n5.mx-auto.d-flex.align-items-center( style = { 'background-color': '#E0E0E0'})
+        .row.col-10.d-flex.flex-row.ml-auto.mr-auto.mt-n5.justify-content-center.py-5
+          h2.h2-responsive.font-weight-bold.text-black.align-self-center( style = {'font-family': 'Titillium Web , sans-serif'})
+              | Call For Action Components
+        // close row
 
 
-      .row.col-10.ml-auto.mr-auto.mt-5.d-flex.justify-content-center.align-items-center.text-white.activ-cont(style = { 'background-color': '#565d67'})
-        .h4.text-center.mr-5.ml-auto
-          |  Duis mollis est non commodo luctus nisi erat porttitor.
-        button.btn-danger.btn-mode.mr-auto( type = 'submit' style = { width: '8em'}) BUTTON
-      .row.col-10.ml-auto.mr-auto.d-flex.justify-content-center.align-items-center.py-1( style = { 'background-color': '#E0E0E0;', height: '9em'})
-        h2.text-black.font-weight-bold( style = {'font-family': 'Titillium Web , sans-serif'})
-          | Features
+      .container.mx-auto.d-flex.flex-column.bg-white( style = { height: '30vh'})
+        .row.col-10.d-flex.flex-row.ml-auto.mr-auto.justify-content-center
 
+          .card.col-12.text-center.text-black.font-weight-normal.h3-responsive.pt-2
+            .card-body
+              .card-text( style = {'font-family': 'Titillium Web , sans-serif'})
+                | Lorem Ipsum
+          p.col-md-10.text-center.text-muted.text-monospace.text-black.font-weight-normal.px-md-4.h5-responsive.display-4
+            | Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
+            |  Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+          form.col-md-7.mb-1.mb-md-2.form-inline.px-0.justify-content-center.h-25
+            .form-group.mx-sm-2.mb-2
+              label.sr-only(for='inputPassword2') Password
+              input#inputPassword2.form-control(type='password' placeholder='Enter email address')
+            button.btn-danger.mb-2.btn-mode(type='submit') SUBSCRIBE
+        // close row
+      // close container
+
+
+      .container.px-0
+        .row.ml-auto.mr-auto.mt-5.d-flex.justify-content-center.align-items-center.text-white.activ-cont(style = { 'background-color': '#565d67'})
+          .h4.text-center.mr-5.ml-auto
+            |  Duis mollis est non commodo luctus nisi erat porttitor.
+          button.btn-danger.btn-mode.mr-auto( type = 'submit' style = { width: '8em'}) BUTTON
+        .row.col-10.mx-auto.mt-4.d-flex.justify-content-center.align-items-center.py-1( style = { 'background-color': '#E0E0E0;', height: '9em'})
+          h2.text-black.font-weight-bold( style = {'font-family': 'Titillium Web , sans-serif'})
+            | Features
+        // close row
+    //close container-fuild
 
     .container-fluid.d-flex.justify-content-center( style = { 'background-color': '#E0E0E0'})
       .container.h-100.d-flex.flex-column.py-5.bg-white
@@ -86,7 +97,7 @@ block body
             .row.d-flex.justify-content-center
               button.btn-danger.active-btn( style = { width: '10em;', height: '3em'}) BUTTON
               button.btn-danger.ml-3.active-btn( style = { width: '10em;', height: '3em'}) BUTTON
-
+        // close row
 
         .row.mt-5( style = { height: '30em'})
           .col-12.position-relative
@@ -96,7 +107,7 @@ block body
               include template/svg/mac
             .cards.position-absolute.ipad(style = { 'z-index': '10'})
               include template/svg/ipad
-
+        // close row
     .container-fluid.py-5(style = { 'background-color': '#E0E0E0'})
       .container.bg-white.h-100
         .row.d-flex.justify-content-around.py-5
@@ -108,13 +119,36 @@ block body
                 | OUR PRODUCT
               p.d-flex.flex-column.card-text.text-left.text-wrap.text-break.font-weight-normal.px-0( style = {'font-family': 'Titillium Web , sans-serif;', 'font-size': '1em'})
               | Lorem ipsum dolor sit amet, consectetuer adipiscing elit.     Donec odio. Quisque volutpat mattis eros. Nullam malesuada     erat ut turpis. Suspendisse urna nibh, viverra non, semper     suscipit, posuere a, pede.
-              ul.mt-5.px-3( style = { 'list-style-type': 'circle'})
-                li
-                  span.cicle Quisque volutpat mattis eros.
-                li
-                  span.cicle Nullam malesuada erat ut turpis
-                li
-                  span.cicle Suspendisse urna nibh
+              ul.mt-5.px-0( style = { 'list-style-type': 'none'})
+                li.d-flex.align-items-center.mb-4
+                  .cicle.mr-3(style = { 'background-color': '#E0E0E0'})
+                  span Quisque volutpat mattis eros.
+                li.d-flex.align-items-center.mb-4
+                  .cicle.mr-3(style = { 'background-color': '#E0E0E0'})
+                  span Nullam malesuada erat ut turpis
+                li.d-flex.align-items-center
+                  .cicle.mr-3(style = { 'background-color': '#E0E0E0'})
+                  span Suspendisse urna nibh
+              //закрытие ul
+              button.btn-lg.btn-outline-dark BIG BUTTON
+    //закрытие container-fluid
+    .container-fluid( style = { 'background-color': '#E0E0E0;', height: '91vh'})
+      .container.mx-auto( style = { 'background-color': '#E0E0E0;', height: '4vh'})
+        .row.w-100
+          .col-xl-12.d-flex.mx-auto.justify-content-center.py-0
+            h1.h2-responsive.font-weight-bold.text-black.align-self-center( style = {'font-family': 'Titillium Web , sans-serif'})
+                | Services
+        // close row
+      // close container
+      .container.bg-dark.mt-5( style = { height: '82vh'})
+        - var list_count = 10;
+        ul
+          - for ( var i = 0; i < list_count; i++)
+           li hello serg !!!
+
+
+
+
 
 
 
