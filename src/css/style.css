@@ -14119,7 +14119,19 @@ a.waves-effect, a.waves-light {
 
 @font-face {
   font-family: "Titillium Web";
-  src: url("fonts/TitilliumWeb-Bold.ttf"); }
+  src: url("../fonts/TitilliumWeb-Bold.ttf"); }
+@font-face {
+  font-family: "Titillium Web Light";
+  src: url("../fonts/TitilliumWeb-Light.ttf"); }
+@font-face {
+  font-family: "Qick Light";
+  src: url("../fonts/Quicksand-Light.ttf"); }
+@font-face {
+  font-family: "Qick Regul";
+  src: url("../fonts/Quicksand-Regular.ttf"); }
+@font-face {
+  font-family: "Qick Medium";
+  src: url("../fonts/Quicksand-Medium.ttf"); }
 body {
   background-color: #E0FFFF; }
 
@@ -14150,13 +14162,58 @@ html, body, header, #intro {
   top: 15.5em; }
 
 .cicle {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; }
+
+.circle-2 {
+  position: relative;
+  display: flex;
+  justify-content: center; }
+
+.cickle {
+  width: 3em;
+  height: 3em;
+  border: 13px solid blue;
   border-radius: 50%;
-  border: 1px solid black; }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  margin-top: 2em; }
+  .cickle .container svg {
+    display: block; }
+
+.progress-ring__circle {
+  transform-origin: center;
+  transform: rotate(-90deg);
+  transition: stroke-dashoffset 0.7s;
+  -webkit-animation: 900ms ease 0s 1 normal forwards running donut-show-0;
+          animation: 900ms ease 0s 1 normal forwards running donut-show-0; }
 
 #mac:hover {
   fill: red; }
+
+.clip-container {
+  width: inherit; }
+  .clip-container .clip {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; }
+  .clip-container .clip-1 {
+    background: #ffecb3;
+    -webkit-clip-path: polygon(0 0, 41% 0, 21% 100%, 0% 100%);
+            clip-path: polygon(0 0, 41% 0, 21% 100%, 0% 100%); }
+  .clip-container .clip-2 {
+    background: #ccff90;
+    -webkit-clip-path: polygon(41% 0, 41% 0, 78% 100%, 21% 100%);
+            clip-path: polygon(41% 0, 41% 0, 78% 100%, 21% 100%); }
+  .clip-container .clip-3 {
+    background: #311b92;
+    -webkit-clip-path: polygon(41% 0, 100% 0, 100% 100%, 78% 100%);
+            clip-path: polygon(41% 0, 100% 0, 100% 100%, 78% 100%); }
 
 .color-link {
   font-family: "Titillium Web";

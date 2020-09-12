@@ -9,6 +9,7 @@ var app = express();
 //app.use(express.static('gulp/'));
 //app.use(express.static('gulp/node_modules/bootstrap/dist/js/'));
 app.use(express.static('src/'));
+//app.use(express.static('src/js/'));
 app.use(express.static('src/html/'));
 
 
@@ -18,7 +19,7 @@ app.get('/', function(req, res) {
   res.sendfile('index.html');
 });
 
-let port = 8082;
+let port = 8083;
 // запускаем сервер на порту 8081
 app.listen(port);
 // отправляем сообщение
