@@ -7,13 +7,28 @@ mixin glava(title, str1, str2)
       span.col-6= str1
       span= str2
 
-mixin cardcickle(progress,proc,title)
+//- миксин прогресс-бар окружность
+mixin CardCickle(progress,proc,title)
   .d-flex.flex-column.w-25.justify-content-center
     svg.progress-ring.mx-auto(width='150' height='150')
       circle.progress-ring__circle( fill="#b9f6ca" cx="75" cy="75" r="72" rd= progress)
       circle( fill="#7283a7"  cx="75" cy="75" r="69" )
       text( x="42" y="87" fill="#fafafa" "font-size"="40")= proc
     h6.text-center.mt-3.text-uppercase.font-weight-bold= title
+
+//- миксин прогресс-бар-линия
+mixin ProgressBar(progress,proc, title)
+  .row-5.h-25.mt-5.d-flex.align-items-end.text-uppercase( style = { width: "inherit" })
+    h6.font-weight-bold.mr-auto= title
+    span.ml-auto.text-muted= proc
+    span
+  svg(width='inherit' height='25' )
+      //    rect( x="0" y="10" width="50%" height="15" fill="#E0E0E0")
+      line.svg-progress( x1="0" y1="10" x2="100%" y2="10" width="100%" height="25" stroke="blue" stroke-width="15"  stroke-dasharray="130%" proc= progress  )
+
+
+
+
 
 
 
@@ -296,20 +311,38 @@ block content
       //close row
   //close container
 
-  .container-fluid( style = { 'background-color': '#E0E0E0;', height: '90vh'})
+  .container-fluid( style = { 'background-color': '#E0E0E0;', height: '65vh'})
     .container.w-100.d-flex.justify-content-center( style = { 'background-color': '#E0E0E0;', height: '12vh'})
       .row.d-flex.justify-content-center.align-items-center
         h1.h2-responsive.font-weight-bold.text-black( style = {'font-family': 'Titillium Web , sans-serif'})
             | Experince Components
       //close row
-    .container.bg-white( style = { height: '70%'})
+    .container.bg-white( style = { height: '75%'})
       +glava('we got skills!', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut pulvinar augue.', 'Nulla facilisi. Sed gravi64 felis nec ipsum egestas, vitae blandit arcu finibus. Vestibulum rhoncus tempus odio, sodales cursus est egestas at.')
+      //секция прогресс баров
       .row.col-10.justify-content-around.mx-auto.mt-5
-        +cardcickle('90','90%','web design')
-        +cardcickle('75','75%','html / css')
-        +cardcickle('70','70%','graphic design')
-        +cardcickle('80','85%','ui / ux')
-    .container.bg-white( style = { height: '70%'})
+        +CardCickle('90','90%','web design')
+        +CardCickle('75','75%','html / css')
+        +CardCickle('70','70%','graphic design')
+        +CardCickle('80','85%','ui / ux')
+      //close row
+    //close conteiner-fluid исправить высоту после отладки скрипта на 50vh
+  .container-fluid( style = { 'background-color': '#E0E0E0;', height: '150vh'})
+    .container.bg-white( style = { height: '100%'})
+      +glava('we got skills!', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut pulvinar augue.', 'Nulla facilisi. Sed gravi64 felis nec ipsum egestas, vitae blandit arcu finibus. Vestibulum rhoncus tempus odio, sodales cursus est egestas at.')
+      .row.h-50.d-flex.justify-content-around.align-items-center.mx-auto.px-5
+        .col-5.d-flex.flex-column.justify-content-end.align-items-between
+          +ProgressBar('90','90%','web design')
+          +ProgressBar('75','75%','html / css')
+
+        .col-5.d-flex.flex-column.justify-content-start.align-items-between
+          +ProgressBar('70','70%','graphic design')
+          +ProgressBar('80','85%','ui / ux')
+
+
+
+
+
 
 
 

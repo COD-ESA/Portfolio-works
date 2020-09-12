@@ -1,10 +1,10 @@
+.activ-cont {
+  height: 8em; }
+
 .active-btn:hover {
   color: black;
   background: white;
   border: 2px solid black; }
-
-.activ-cont {
-  height: 8em; }
 
 .section-product {
   height: 11em; }
@@ -14190,6 +14190,12 @@ html, body, header, #intro {
   transition: stroke-dashoffset 0.7s;
   -webkit-animation: 900ms ease 0s 1 normal forwards running donut-show-0;
           animation: 900ms ease 0s 1 normal forwards running donut-show-0; }
+
+.svg-progress {
+  transition: stroke-dashoffset 0.9s;
+  -webkit-animation: 900ms ease 0s 1 normal forwards running donut-show-0;
+          animation: 900ms ease 0s 1 normal forwards running donut-show-0;
+  z-index: 100; }
 
 #mac:hover {
   fill: red; }

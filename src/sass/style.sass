@@ -81,6 +81,12 @@ html,body,header,#intro
   transition: stroke-dashoffset .7s
   animation: 900ms ease 0s 1 normal forwards running donut-show-0
 
+.svg-progress
+  //transform-origin: center
+  transition: stroke-dashoffset .9s
+  animation: 900ms ease 0s 1 normal forwards running donut-show-0
+  z-index: 100
+
 
 #mac
   &:hover
@@ -108,9 +114,9 @@ html,body,header,#intro
     background: #311b92
     clip-path: polygon(41% 0, 100% 0, 100% 100%, 78% 100%)
 
-
-
 //удалить сверху правила до этого комментария
+
+
 @import "import/_link-navbar.sass"
 @import "media/md-devices.sass"
 @import "import/btn-mod.sass"
