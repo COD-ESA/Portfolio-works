@@ -14198,6 +14198,15 @@ html, body, header, #intro {
   -webkit-animation: 900ms ease 0s 1 normal forwards running donut-show-0;
           animation: 900ms ease 0s 1 normal forwards running donut-show-0; }
 
+.shadow-link {
+  box-shadow: -0.1em 0.1em 0.2em;
+  border-radius: 0 0;
+  font-size: 0.9em;
+  width: 5em; }
+  .shadow-link:hover {
+    background: black;
+    color: white; }
+
 #mac:hover {
   fill: red; }
 

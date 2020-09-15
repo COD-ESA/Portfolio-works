@@ -33,7 +33,6 @@ mixin ProgressBar(progress,proc, title)
 
 
 
-
 block content
   header
     .container
@@ -340,6 +339,106 @@ block content
         .col-5.d-flex.flex-column.justify-content-end.align-items-between
           +ProgressBar('70','70%','graphic design')
           +ProgressBar('10','10%','ui / ux')
+        //close col
+        //close col
+      //close row
+    //close container
+  //close container-fluid
+
+  // section our portfolio
+  .container-fluid( style = { 'background-color': fon})
+    .container.w-100.d-flex.justify-content-center( style = { 'background-color': fon, height: '12vh'})
+      .row.d-flex.justify-content-center.align-items-center
+        h1.h2-responsive.font-weight-bold.text-black( style = {'font-family': 'Titillium Web , sans-serif'})
+            | Portfolio Components
+    //close container
+      //close row
+
+    .container.bg-white( style = { height: '90%'})
+      +glava('OUR PORTFOLIO', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut pulvinar augue.', 'Nulla facilisi. Sed gravi64 felis nec ipsum egestas, vitae blandit arcu finibus. Vestibulum rhoncus tempus odio, sodales cursus est egestas at.')
+      .row.d-flex.justify-content-center.mb-5
+        .btn-group.btn-group-toggle( data-toggle="buttons")
+          label.btn.btn-outline-dark.shadow-link.mx-3.active
+            input#options1.text-uppercase(type= "radio" name= "options" checked = '')
+            | ALL
+          label.btn.btn-outline-dark.shadow-link.mx-3
+            input#options2.text-uppercase(type= "radio" name= "options")
+            | WEB
+          label.btn.btn-outline-dark.shadow-link.mx-3
+            input#options3.text-uppercase(type= "radio" name= "options")
+            | APPS
+          label.btn.btn-outline-dark.shadow-link.mx-3
+            input#options4.text-uppercase(type= "radio" name= "options")
+            | ICONS
+
+      //close row
+      .row.d-flex.justify-content-center.text-center
+        .card(style='width: 15rem;')
+          img.card-img-top(src=human alt='...')
+          .card-body
+            h5.card-title Card title
+            p.card-text
+              | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+
+        .card(style='width: 15rem;')
+          img.card-img-top(src=human alt='...')
+          .card-body
+            h5.card-title Card title
+            p.card-text
+              | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+
+        .card(style='width: 15rem;')
+          img.card-img-top(src=human alt='...')
+          .card-body
+            h5.card-title Card title
+            p.card-text
+              | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+      .row.d-flex.justify-content-center.text-center
+        .card(style='width: 15rem;')
+          img.card-img-top(src=human alt='...')
+          .card-body
+            h5.card-title Card title
+            p.card-text
+              | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+
+        .card(style='width: 15rem;')
+          img.card-img-top(src=human alt='...')
+          .card-body
+            h5.card-title Card title
+            p.card-text
+              | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+
+        .card(style='width: 15rem;')
+          img.card-img-top(src=human alt='...')
+          .card-body
+            h5.card-title Card title
+            p.card-text
+              | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+      .row.d-flex.justify-content-center.text-center
+        .card(style='width: 15rem;')
+          img.card-img-top(src=human alt='...')
+          .card-body
+            h5.card-title Card title
+            p.card-text
+              | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+
+        .card(style='width: 15rem;')
+          img.card-img-top(src=human alt='...')
+          .card-body
+            h5.card-title Card title
+            p.card-text
+              | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+
+        .card(style='width: 15rem;')
+          img.card-img-top(src=human alt='...')
+          .card-body
+            h5.card-title Card title
+            p.card-text
+              | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+
+
+
+
 
 
 
