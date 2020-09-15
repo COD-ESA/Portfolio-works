@@ -18,13 +18,13 @@ mixin CardCickle(progress,proc,title)
 
 //- миксин прогресс-бар-линия
 mixin ProgressBar(progress,proc, title)
-  .row-5.h-25.mt-5.d-flex.align-items-end.text-uppercase( style = { width: "inherit" })
-    h6.font-weight-bold.mr-auto= title
-    span.ml-auto.text-muted= proc
-    span
-  svg(width='inherit' height='25' )
-      //    rect( x="0" y="10" width="50%" height="15" fill="#E0E0E0")
-      line.svg-progress( x1="0" y1="10" x2="100%" y2="10" width="100%" height="25" stroke="blue" stroke-width="15"  stroke-dasharray="130%" proc= progress  )
+  .row-5.h-25.mt-5.d-flex.align-items-end.text-uppercase.text-end.px-0.py-0( style = { width: "inherit" })
+    h6.font-weight-bold.mr-auto.mt-2= title
+    span.mb-1.ml-auto.text-muted= proc
+  div.px-0.py-0.d-flex.mt-3( style = {background: fon, width:"100%;" })
+    svg.my-0(width='100%' height='20' )
+        line.svg-progress( x1="0" y1="10" x2="100%" y2="10" width="100%" height="20" proc= progress  )
+
 
 
 
@@ -80,8 +80,8 @@ block content
                 button.btn-lg.btn-outline-dark BIG BUTTON
   // close Header
 
-  .container-fluid.px-0( style = { 'background-color': '#E0E0E0;', height: '85vh'})
-    .container.h-25.mb-n5.mx-auto.d-flex.align-items-center( style = { 'background-color': '#E0E0E0'})
+  .container-fluid.px-0( style = { 'background-color': fon, height: '85vh'})
+    .container.h-25.mb-n5.mx-auto.d-flex.align-items-center( style = { 'background-color': fon})
       .row.col-10.d-flex.flex-row.ml-auto.mr-auto.mt-n5.justify-content-center.py-5
         h2.h2-responsive.font-weight-bold.text-black.align-self-center( style = {'font-family': 'Titillium Web , sans-serif'})
             | Call For Action Components
@@ -113,13 +113,13 @@ block content
         .h4.text-center.mr-5.ml-auto
           |  Duis mollis est non commodo luctus nisi erat porttitor.
         button.btn-danger.btn-mode.mr-auto( type = 'submit' style = { width: '8em'}) BUTTON
-      .row.col-10.mx-auto.mt-4.d-flex.justify-content-center.align-items-center.py-1( style = { 'background-color': '#E0E0E0;', height: '9em'})
+      .row.col-10.mx-auto.mt-4.d-flex.justify-content-center.align-items-center.py-1( style = { 'background-color': fon, height: '9em'})
         h2.text-black.font-weight-bold( style = {'font-family': 'Titillium Web , sans-serif'})
           | Features
       // close row
   //close container-fuild
 
-  .container-fluid.d-flex.justify-content-center( style = { 'background-color': '#E0E0E0'})
+  .container-fluid.d-flex.justify-content-center( style = { 'background-color': fon})
     .container.h-100.d-flex.flex-column.py-5.bg-white
       .row.d-flex.justify-content-center.mb-2
         .cards.text-black( style = { width: "47rem"})
@@ -142,7 +142,7 @@ block content
           .cards.position-absolute.ipad(style = { 'z-index': '10'})
             include template/svg/ipad
       // close row
-  .container-fluid.py-5(style = { 'background-color': '#E0E0E0'})
+  .container-fluid.py-5(style = { 'background-color': fon})
     .container.bg-white.h-100
       .row.d-flex.justify-content-around.py-5
         .col-3.offset-2
@@ -155,19 +155,19 @@ block content
             | Lorem ipsum dolor sit amet, consectetuer adipiscing elit.     Donec odio. Quisque volutpat mattis eros. Nullam malesuada     erat ut turpis. Suspendisse urna nibh, viverra non, semper     suscipit, posuere a, pede.
             ul.mt-5.px-0( style = { 'list-style-type': 'none'})
               li.d-flex.align-items-center.mb-4
-                .cicle.mr-3(style = { 'background-color': '#E0E0E0'})
+                .cicle.mr-3(style = { 'background-color': fon})
                 span Quisque volutpat mattis eros.
               li.d-flex.align-items-center.mb-4
-                .cicle.mr-3(style = { 'background-color': '#E0E0E0'})
+                .cicle.mr-3(style = { 'background-color': fon})
                 span Nullam malesuada erat ut turpis
               li.d-flex.align-items-center
-                .cicle.mr-3(style = { 'background-color': '#E0E0E0'})
+                .cicle.mr-3(style = { 'background-color': fon})
                 span Suspendisse urna nibh
             //закрытие ul
             button.btn-lg.btn-outline-dark BIG BUTTON
   //закрытие container-fluid
-  .container-fluid( style = { 'background-color': '#E0E0E0;', height: '73vh'})
-    .container.mx-auto( style = { 'background-color': '#E0E0E0;', height: '4vh'})
+  .container-fluid( style = { 'background-color': fon, height: '73vh'})
+    .container.mx-auto( style = { 'background-color': fon, height: '4vh'})
       .row.w-100
         .col-xl-12.d-flex.mx-auto.justify-content-center.py-0
           h1.h2-responsive.font-weight-bold.text-black.align-self-center( style = {'font-family': 'Titillium Web , sans-serif'})
@@ -210,7 +210,7 @@ block content
     //close container
   // close container-fluid
 
-  .container-fluid.pt-5( style = { 'background-color': '#E0E0E0;', height: '65vh'})
+  .container-fluid.pt-5( style = { 'background-color': fon, height: '65vh'})
     .container.bg-white.h-100
       .row.flex-column.text-black.text-center( style = {'font-family': 'Titillium Web , sans-serif'})
         h2.h2-responsive.mt-5.font-weight-bold.mr-auto.ml-auto SERVICES WE PROVIDE
@@ -225,14 +225,14 @@ block content
         .container.col-lg-5.d-flex.flex-column
 
           .container.d-flex.justify-content-end.mb-5
-            .cicle.mr-3( style = { 'background-color': '#E0E0E0'})
+            .cicle.mr-3( style = { 'background-color': fon })
             .col-lg-8
               h6.font-weight-bold BRANDING
               p.lead.text-muted( style = { 'font-size': '0.7em'})
                 |  Lorem ipsum dolor sit amet, stet facilisi ex vel, per te stet adipiscing persequeris
           // close container
           .container.d-flex.justify-content-end
-            .cicle.mr-3( style = { 'background-color': '#E0E0E0'})
+            .cicle.mr-3( style = { 'background-color': fon })
             .col-lg-8
               h6.font-weight-bold DEVELOPMENT
               p.lead.text-muted( style = { 'font-size': '0.7em'})
@@ -242,14 +242,14 @@ block content
         .container.col-lg-5.d-flex.flex-column
 
           .container.d-flex.justify-content-start.mb-5
-            .cicle.mr-3( style = { 'background-color': '#E0E0E0'})
+            .cicle.mr-3( style = { 'background-color': fon })
             .col-lg-8
               h6.font-weight-bold DESIGN
               p.lead.text-muted( style = { 'font-size': '0.7em'})
                 |  Lorem ipsum dolor sit amet, stet facilisi ex vel, per te stet adipiscing persequeris
           // close container
           .container.d-flex.justify-content-start
-            .cicle.mr-3( style = { 'background-color': '#E0E0E0'})
+            .cicle.mr-3( style = { 'background-color': fon })
             .col-lg-8
               h6.font-weight-bold ROCKET SCIENCE
               p.lead.text-muted( style = { 'font-size': '0.7em'})
@@ -260,8 +260,8 @@ block content
     // close container
   // close container-fluid
 
-  .container-fluid( style = { 'background-color': '#E0E0E0;', height: '80vh'})
-    .container.mx-auto( style = { 'background-color': '#E0E0E0;', height: '14vh'})
+  .container-fluid( style = { 'background-color': fon, height: '80vh'})
+    .container.mx-auto( style = { 'background-color': fon, height: '14vh'})
       .row.w-100.h-100.d-flex.justify-content-center.align-items-center
         h1.h2-responsive.font-weight-bold.text-black( style = {'font-family': 'Titillium Web , sans-serif'})
             | Team Components
@@ -279,40 +279,40 @@ block content
       // close row
       .row.col-8.mr-auto.ml-auto.d-flex.justify-content-lg-center.flex-nowrap.text-center.pt-5
         .card
-          img( src = "../img/svg/avatar.svg" alt = "not foto" style = { width: '11em;', height: '11em;','background-color': '#E0E0E0;', 'border-radius': '50%'}).card-img-top.mr-auto.ml-auto
+          img( src = "../img/svg/avatar.svg" alt = "not foto" style = { width: '11em;', height: '11em;','background-color': fon, 'border-radius': '50%'}).card-img-top.mr-auto.ml-auto
           .card-body.pb-0
             h6.font-weight-bold.card-title BRANDING
             p.lead.card-text( style = {'font-size': '0.7em'}).text-muted
               |  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
             .d-flex.justify-content-center
-              img.mr-1( src = "../img/svg/facebook.svg" alt = "not foto" style = { width: '2em;', height: '2em;','background-color': '#E0E0E0;', 'border-radius': '50%'})
-              img.ml-1( src = "../img/svg/google-plus.svg" alt = "not foto" style = { width: '2em;', height: '2em;','background-color': '#E0E0E0;', 'border-radius': '50%'})
+              img.mr-1( src = "../img/svg/facebook.svg" alt = "not foto" style = { width: '2em;', height: '2em;','background-color': fon, 'border-radius': '50%'})
+              img.ml-1( src = "../img/svg/google-plus.svg" alt = "not foto" style = { width: '2em;', height: '2em;','background-color': 'fon;', 'border-radius': '50%'})
         // close card
         .card
-          img( src = "../img/svg/avatar.svg" alt = "not foto" style = { width: '11em;', height: '11em;','background-color': '#E0E0E0;', 'border-radius': '50%'}).mr-auto.ml-auto.card-img-top
+          img( src = "../img/svg/avatar.svg" alt = "not foto" style = { width: '11em;', height: '11em;','background-color': fon, 'border-radius': '50%'}).mr-auto.ml-auto.card-img-top
           .card-body.pb-0
             h6.font-weight-bold.card-title DESING
             p.lead.card-text.text-muted( style = { 'font-size': '0.7em'})
               |  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
             .d-flex.justify-content-center
-              img.mr-1( src = "../img/svg/facebook.svg" alt = "not foto" style = { width: '2em;', height: '2em;','background-color': '#E0E0E0;', 'border-radius': '50%'})
-              img.ml-1( src = "../img/svg/google-plus.svg" alt = "not foto" style = { width: '2em;', height: '2em;','background-color': '#E0E0E0;', 'border-radius': '50%'})
+              img.mr-1( src = "../img/svg/facebook.svg" alt = "not foto" style = { width: '2em;', height: '2em;','background-color': 'fon;', 'border-radius': '50%'})
+              img.ml-1( src = "../img/svg/google-plus.svg" alt = "not foto" style = { width: '2em;', height: '2em;','background-color': fon, 'border-radius': '50%'})
         // close card
         .card
-          img( src = "../img/svg/avatar.svg" alt = " not foto " style = { width: '11em;', height: '11em;','background-color': '#E0E0E0;', 'border-radius': '50%'}).mr-auto.ml-auto.card-img-top
+          img( src = "../img/svg/avatar.svg" alt = " not foto " style = { width: '11em;', height: '11em;','background-color': fon, 'border-radius': '50%'}).mr-auto.ml-auto.card-img-top
           .card-body.pb-0
             h6.font-weight-bold.card-title DEVELOPMENT
             p.lead.card-text.text-muted( style = { 'font-size': '0.7em'})
               |  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
             .d-flex.justify-content-center
-              img.mr-1( src = "../img/svg/facebook.svg" alt = "not foto" style = { width: '2em;', height: '2em;','background-color': '#E0E0E0;', 'border-radius': '50%'})
-              img.ml-1( src = "../img/svg/google-plus.svg" alt = "not foto" style = { width: '2em;', height: '2em;','background-color': '#E0E0E0;', 'border-radius': '50%'})
+              img.mr-1( src = "../img/svg/facebook.svg" alt = "not foto" style = { width: '2em;', height: '2em;','background-color': 'fon;', 'border-radius': '50%'})
+              img.ml-1( src = "../img/svg/google-plus.svg" alt = "not foto" style = { width: '2em;', height: '2em;','background-color': fon, 'border-radius': '50%'})
         // close card
       //close row
   //close container
 
-  .container-fluid( style = { 'background-color': '#E0E0E0;', height: '65vh'})
-    .container.w-100.d-flex.justify-content-center( style = { 'background-color': '#E0E0E0;', height: '12vh'})
+  .container-fluid( style = { 'background-color': fon, height: '65vh'})
+    .container.w-100.d-flex.justify-content-center( style = { 'background-color': fon, height: '12vh'})
       .row.d-flex.justify-content-center.align-items-center
         h1.h2-responsive.font-weight-bold.text-black( style = {'font-family': 'Titillium Web , sans-serif'})
             | Experince Components
@@ -326,18 +326,20 @@ block content
         +CardCickle('70','70%','graphic design')
         +CardCickle('80','85%','ui / ux')
       //close row
-    //close conteiner-fluid исправить высоту после отладки скрипта на 50vh
-  .container-fluid( style = { 'background-color': '#E0E0E0;', height: '150vh'})
+    // close container
+  //close conteiner-fluid исправить высоту после отладки скрипта на 50vh
+  .container-fluid( style = { 'background-color': fon, height: '50vh'})
     .container.bg-white( style = { height: '100%'})
       +glava('we got skills!', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut pulvinar augue.', 'Nulla facilisi. Sed gravi64 felis nec ipsum egestas, vitae blandit arcu finibus. Vestibulum rhoncus tempus odio, sodales cursus est egestas at.')
-      .row.h-50.d-flex.justify-content-around.align-items-center.mx-auto.px-5
+      .row.h-25.d-flex.justify-content-around.align-items-center.mx-auto.px-5
+
         .col-5.d-flex.flex-column.justify-content-end.align-items-between
-          +ProgressBar('90','90%','web design')
+          +ProgressBar('100','100%','web design')
           +ProgressBar('75','75%','html / css')
 
-        .col-5.d-flex.flex-column.justify-content-start.align-items-between
+        .col-5.d-flex.flex-column.justify-content-end.align-items-between
           +ProgressBar('70','70%','graphic design')
-          +ProgressBar('80','85%','ui / ux')
+          +ProgressBar('10','10%','ui / ux')
 
 
 
