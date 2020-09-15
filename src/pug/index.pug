@@ -259,14 +259,15 @@ block content
     // close container
   // close container-fluid
 
-  .container-fluid( style = { 'background-color': fon, height: '80vh'})
+    //.container-fluid( style = { 'background-color': fon, height: '80vh'})
+  .container-fluid( style = { 'background-color': fon})
     .container.mx-auto( style = { 'background-color': fon, height: '14vh'})
       .row.w-100.h-100.d-flex.justify-content-center.align-items-center
         h1.h2-responsive.font-weight-bold.text-black( style = {'font-family': 'Titillium Web , sans-serif'})
             | Team Components
 
 
-    .container.bg-white( style = { height: '80%'})
+    .container.bg-white.pb-5( style = { height: '80%'})
       .row.flex-column.text-black( style = {'font-family': 'Titillium Web , sans-serif'})
         h2.h2-responsive.mt-5.font-weight-bold.mr-auto.ml-auto.text-uppercase our team
         p.col-7.ml-auto.mr-auto.mt-2.font-weight-normal.text-muted
@@ -310,13 +311,15 @@ block content
       //close row
   //close container
 
-  .container-fluid( style = { 'background-color': fon, height: '65vh'})
+   //.container-fluid( style = { 'background-color': fon, height: '65vh'})
+  .container-fluid.pb-5( style = { 'background-color': fon})
     .container.w-100.d-flex.justify-content-center( style = { 'background-color': fon, height: '12vh'})
       .row.d-flex.justify-content-center.align-items-center
         h1.h2-responsive.font-weight-bold.text-black( style = {'font-family': 'Titillium Web , sans-serif'})
             | Experince Components
       //close row
-    .container.bg-white( style = { height: '75%'})
+       //.container.bg-white( style = { height: '75%'})
+    .container.bg-white.pb-5
       +glava('we got skills!', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut pulvinar augue.', 'Nulla facilisi. Sed gravi64 felis nec ipsum egestas, vitae blandit arcu finibus. Vestibulum rhoncus tempus odio, sodales cursus est egestas at.')
       //секция прогресс баров
       .row.col-10.justify-content-around.mx-auto.mt-5
