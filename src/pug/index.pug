@@ -348,6 +348,8 @@ block content
     //close container
   //close container-fluid
 
+
+
   // section our portfolio
   .container-fluid( style = { 'background-color': fon})
     .container.w-100.d-flex.justify-content-center( style = { 'background-color': fon, height: '12vh'})
@@ -357,87 +359,166 @@ block content
     //close container
       //close row
 
-    .container.bg-white( style = { height: '90%'})
+    .container.bg-white.pb-4( style = { height: '90%'})
       +glava('OUR PORTFOLIO', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut pulvinar augue.', 'Nulla facilisi. Sed gravi64 felis nec ipsum egestas, vitae blandit arcu finibus. Vestibulum rhoncus tempus odio, sodales cursus est egestas at.')
       .row.d-flex.justify-content-center.mb-5
-        .btn-group.btn-group-toggle( data-toggle="buttons")
-          label.btn.btn-outline-dark.shadow-link.mx-3.active
+        .btn-group-md.btn-group-toggle( data-toggle="buttons")
+          label.rounded.btn.btn-outline-dark.mx-3.active
             input#options1.text-uppercase(type= "radio" name= "options" checked = '')
-            | ALL
-          label.btn.btn-outline-dark.shadow-link.mx-3
+            |  ALL
+          label.rounded.btn.btn-outline-dark.mx-3
             input#options2.text-uppercase(type= "radio" name= "options")
             | WEB
-          label.btn.btn-outline-dark.shadow-link.mx-3
+          label.rounded.btn.btn-outline-dark.mx-3
             input#options3.text-uppercase(type= "radio" name= "options")
             | APPS
-          label.btn.btn-outline-dark.shadow-link.mx-3
+          label.rounded.btn.btn-outline-dark.mx-3
             input#options4.text-uppercase(type= "radio" name= "options")
             | ICONS
 
+
+      .row.d-flex.justify-content-center.text-center.mb-2
+        .cont
+          div.hamelion.mb-2( style = { height: "300px", width:"300px"})
+          h6.card-titlet.font-weight-bold( style = { width:"250px"}) Neque Qorro Quisquam
+          p.card-text.font-weight-100.text-muted( style = { "font-size": "0.7em", width:"250px"})
+            | apps, icons, ui
+
+
+        .cont.mx-3
+          div.hamelion.mb-2( style = { height: "300px", width:"300px"})
+          h6.card-titlet.font-weight-bold( style = { width:"250px"}) Neque Qorro Quisquam
+          p.card-text.font-weight-100.text-muted( style = { "font-size": "0.7em", width:"250px"})
+            | apps, icons, ui
+
+
+        .cont
+          div.hamelion.mb-2( style = { height: "300px", width:"300px"})
+          h6.card-titlet.font-weight-bold( style = { width:"250px"}) Neque Qorro Quisquam
+          p.card-text.font-weight-100.text-muted( style = { "font-size": "0.7em", width:"250px"})
+            | apps, icons, ui
+
+
+      .row.d-flex.justify-content-center.text-center.mb-2
+        .cont
+          div.hamelion.mb-2( style = { height: "300px", width:"300px"})
+          h6.card-titlet.font-weight-bold( style = { width:"250px"}) Neque Qorro Quisquam
+          p.card-text.font-weight-100.text-muted( style = { "font-size": "0.7em", width:"250px"})
+            | apps, icons, ui
+
+
+        .cont.mx-3
+          div.hamelion.mb-2( style = { height: "300px", width:"300px"})
+          h6.card-titlet.font-weight-bold( style = { width:"250px"}) Neque Qorro Quisquam
+          p.card-text.font-weight-100.text-muted( style = { "font-size": "0.7em", width:"250px"})
+            | apps, icons, ui
+
+
+        .cont
+          div.hamelion.mb-2( style = { height: "300px", width:"300px"})
+          h6.card-titlet.font-weight-bold( style = { width:"250px"}) Neque Qorro Quisquam
+          p.card-text.font-weight-100.text-muted( style = { "font-size": "0.7em", width:"250px"})
+            | apps, icons, ui
+
+
+      .row.d-flex.justify-content-center.text-center.mb-2
+        .cont
+          div.hamelion.mb-2( style = { height: "300px", width:"300px"})
+          h6.card-titlet.font-weight-bold( style = { width:"250px"}) Neque Qorro Quisquam
+          p.card-text.font-weight-100.text-muted( style = { "font-size": "0.7em", width:"250px"})
+            | apps, icons, ui
+
+
+        .cont.mx-3
+          div.hamelion.mb-2( style = { height: "300px", width:"300px"})
+          h6.card-titlet.font-weight-bold( style = { width:"250px"}) Neque Qorro Quisquam
+          p.card-text.font-weight-100.text-muted( style = { "font-size": "0.7em", width:"250px"})
+            | apps, icons, ui
+
+
+        .cont
+          div.hamelion.mb-2( style = { height: "300px", width:"300px"})
+          h6.card-titlet.font-weight-bold( style = { width:"250px"}) Neque Qorro Quisquam
+          p.card-text.font-weight-100.text-muted( style = { "font-size": "0.7em", width:"250px"})
+            | apps, icons, ui
+
+      .row.d-flex.justify-content-center.text-center.my-5
+        button.btn.btn-outline-dark.text-uppercase.rounded-0( style = { "box-shadow": "2px 2px 0 0"}) load more
+
       //close row
-      .row.d-flex.justify-content-center.text-center
-        .card(style='width: 15rem;')
-          img.card-img-top(src=human alt='...')
-          .card-body
-            h5.card-title Card title
-            p.card-text
-              | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+      //close row
+      //close row
+    //close container
+  //close container-fluid
+  .container-fluid.pt-4( style = { 'background-color': fon})
+    .container.bg-white.d-flex.justify-center.flex-column
+      .row.w-100.d-flex.justify-content-center.align-items-center.py-5
+        h5.text-uppercase.font-weight-bold our portfolio
+      .row
+        ul.link-nav.nav.text-uppercase.ml-5
+          li.n-pr-3.nav-item
+            a.nav-link.text-dark.active(href='#') ALL
+          li.nav-item
+             a.nav-link.disabled(href='#' tabindex='-1' aria-disabled='true') /
+          li.nav-item
+            a.nav-link.text-dark(href='#') nature
+          li.nav-item
+             a.nav-link.disabled(href='#' tabindex='-1' aria-disabled='true') /
+          li.nav-item
+            a.nav-link.text-dark(href='#') beauty
+          li.nav-item
+             a.nav-link.disabled(href='#' tabindex='-1' aria-disabled='true') /
+          li.nav-item
+            a.nav-link.text-dark(href='#') stills
 
-        .card(style='width: 15rem;')
-          img.card-img-top(src=human alt='...')
-          .card-body
-            h5.card-title Card title
-            p.card-text
-              | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+      .row.d-flex.justify-content-center
+        .hameleon-2
+        .hameleon-2
+        .hameleon-2
+        .hameleon-2
+        .hameleon-2
+      .row.pt-3.pb-4.d-flex.justify-content-around
+        .col-4.px-0
+          h4.text-uppercase.text-left
+            strong lorem ipsum dollor
+        .col-4.px-0
+          h6.text-uppercase.text-muted.text-right 368 photos
 
-        .card(style='width: 15rem;')
-          img.card-img-top(src=human alt='...')
-          .card-body
-            h5.card-title Card title
-            p.card-text
-              | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
-      .row.d-flex.justify-content-center.text-center
-        .card(style='width: 15rem;')
-          img.card-img-top(src=human alt='...')
-          .card-body
-            h5.card-title Card title
-            p.card-text
-              | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+      .row.d-flex.justify-content-center
+        .hameleon-2
+        .hameleon-2
+        .hameleon-2
+        .hameleon-2
+        .hameleon-2
+      .row.pt-3.pb-4.d-flex.justify-content-around
+        .col-4.px-0
+          h4.text-uppercase.text-left
+            strong lorem ipsum dollor
+        .col-4.px-0
+          h6.text-uppercase.text-muted.text-right 368 photos
 
-        .card(style='width: 15rem;')
-          img.card-img-top(src=human alt='...')
-          .card-body
-            h5.card-title Card title
-            p.card-text
-              | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+      .row.d-flex.justify-content-center
+        .hameleon-2
+        .hameleon-2
+        .hameleon-2
+        .hameleon-2
+        .hameleon-2
+      .row.pt-3.pb-4.d-flex.justify-content-around
+        .col-4.px-0
+          h4.text-uppercase.text-left
+            strong lorem ipsum dollor
+        .col-4.px-0
+          h6.text-uppercase.text-muted.text-right 368 photos
 
-        .card(style='width: 15rem;')
-          img.card-img-top(src=human alt='...')
-          .card-body
-            h5.card-title Card title
-            p.card-text
-              | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
-      .row.d-flex.justify-content-center.text-center
-        .card(style='width: 15rem;')
-          img.card-img-top(src=human alt='...')
-          .card-body
-            h5.card-title Card title
-            p.card-text
-              | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
 
-        .card(style='width: 15rem;')
-          img.card-img-top(src=human alt='...')
-          .card-body
-            h5.card-title Card title
-            p.card-text
-              | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
 
-        .card(style='width: 15rem;')
-          img.card-img-top(src=human alt='...')
-          .card-body
-            h5.card-title Card title
-            p.card-text
-              | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+
+
+
+
+
+
+
 
 
 
