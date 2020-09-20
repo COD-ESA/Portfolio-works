@@ -454,22 +454,25 @@ block content
     .container.bg-white.d-flex.justify-center.flex-column
       .row.w-100.d-flex.justify-content-center.align-items-center.py-5
         h5.text-uppercase.font-weight-bold our portfolio
-      .row
-        ul.link-nav.nav.text-uppercase.ml-5
-          li.n-pr-3.nav-item
-            a.nav-link.text-dark.active(href='#') ALL
-          li.nav-item
-             a.nav-link.disabled(href='#' tabindex='-1' aria-disabled='true') /
-          li.nav-item
-            a.nav-link.text-dark(href='#') nature
-          li.nav-item
-             a.nav-link.disabled(href='#' tabindex='-1' aria-disabled='true') /
-          li.nav-item
-            a.nav-link.text-dark(href='#') beauty
-          li.nav-item
-             a.nav-link.disabled(href='#' tabindex='-1' aria-disabled='true') /
-          li.nav-item
-            a.nav-link.text-dark(href='#') stills
+      .row.d-flex.justify-content-sm-around.justify-content-lg-start.justify-content-xl-center
+        .col-9.col-xl-5.px-xl-0.px-lg-1
+          ul.link-nav.nav.text-uppercase
+            li.n-pr-3.nav-item
+              a.nav-link.text-dark.active(href='#') ALL
+            li.nav-item
+               a.nav-link.disabled(href='#' tabindex='-1' aria-disabled='true') /
+            li.nav-item
+              a.nav-link.text-dark(href='#') nature
+            li.nav-item
+               a.nav-link.disabled(href='#' tabindex='-1' aria-disabled='true') /
+            li.nav-item
+              a.nav-link.text-dark(href='#') beauty
+            li.nav-item
+               a.nav-link.disabled(href='#' tabindex='-1' aria-disabled='true') /
+            li.nav-item
+              a.nav-link.text-dark(href='#') stills
+        .col-xl-5
+
       //close row
       .row.d-flex.justify-content-center
         .hameleon-2
@@ -615,7 +618,7 @@ block content
       .row.d-flex.justify-content-center.my-5
         h3.font-weight-bold.text-uppercase our clients live us
       //close row
-      .row.d-flex.justify-content-center.px-5.mt-5.pt-5
+      .row.d-flex.justify-content-center.px-5.mt-5.py-5
         .container.col-lg-5.d-flex.flex-column
 
           .container.d-flex.justify-content-end.mb-5
@@ -659,17 +662,47 @@ block content
               h6.font-weight-bold.text-uppercase Adriana lima
               p.text-muted( style = { 'font-size': '0.7em'})
                 |  CEO if Pinterest
-
-
     //close container
-
-
-
   //close container-fluid
 
+  .container-fluid.d-flex.flex-column.justify-content-center( style = { 'background-color': fon})
+    .row.d-flex.justify-content-center.my-5
+      h3.font-weight-bold Pricing Tables
+    //close row
+    .container.bg-white.d-flex.flex-column
+      .row.pt-5.pb-2
+        h3.font-weight-bold.text-uppercase.mx-auto select a plan
+      //close row
+      .row.mb-5
+        p.mx-auto.text-muted( style = { 'font-size': '0.7em'})
+          | Lorem ipsum dolor sit amet, stet facilisi ex vel, per te stet adipiscing persequeris
+      //close row
+      .row.d-flex.justify-content-between.pb-3.px-2
+
+        .col-3.d-flex.flex-column.justufy-con.py-3tent-center.border.border-dark.py-3
+          h3.mx-auto.mt-4.mb-2.font-weight-bold.text-uppercase personal
+          p.lead.text-center.text-muted( style = { 'font-size': '0.7em'})
+            |  9$/Month
+          a.btn.btn-secondary.btn-md( style = { color: "white", 'font-weight': "bold"})   YOUR PLAN
+
+        .col-3.d-flex.flex-column.justufy-content-center.border.border-dark.py-3
+          h3.mx-auto.mt-4.mb-2.font-weight-bold.text-uppercase.mx-n5 professional
+          p.lead.text-center.text-muted( style = { 'font-size': '0.7em'})
+            |  9$/Month
+          a.btn.btn-danger.btn-md( style = { color: "white", 'font-weight': "bold"})   UPGRADE
+
+        .col-3.d-flex.flex-column.justufy-content-center.border.border-dark.py-3
+          h3.mx-auto.mt-4.mb-2.font-weight-bold.text-uppercase business
+          p.lead.text-center.text-muted( style = { 'font-size': '0.7em'})
+            |  9$/Month
+          a.btn.btn-danger.btn-md( style = { color: "white", 'font-weight': "bold"})   UPGRADE
+      //close row
 
 
+      //close row
+    //close container
 
+  //close container-fluid
 
 
 
