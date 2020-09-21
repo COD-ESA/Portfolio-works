@@ -1,25 +1,74 @@
 //скрываю логотип в header
 // и показываю его на надписбю в центре экрана
 
-@media (max-width: 768px)		
-	.invise
-		visibility: hidden
+@media (max-width: 768px)
+  .invise
+    visibility: hidden
 
 @media (min-width: 769px)
-	.smailler-768
-		visibility: hidden
-	
+  .smailler-768
+    visibility: hidden
+
 //-----------------------------------------
 
 
 //кнопка SUBSCRIBE НАСТРОЙКА ВЫСОТЫ
 @media (min-width: 768px)
-	.btn-mode
-		height: 2.5em
+  .btn-mode
+    height: 2.5em
 
-//настройка положения macbooka
+//настройка положения macbooka/iphona/ipad
+@media (max-width: 1200px)
+  .mac
+    left: 10em
+    #SVGDoc
+      width: 600px
+  .iphone
+    top: 16.3em
+    left: 13em
+    #SVGDoc
+      width: 100px
+  .ipad
+    top: 10.1em
+    left: 41em
+    #SVGDoc
+      width: 200px
+@media (max-width: 991px)
+  .mac
+    left: 3.5em
+    #SVGDoc
+      width: 600px
+  .iphone
+    top: 16.3em
+    left: 6.7em
+    #SVGDoc
+      width: 100px
+  .ipad
+    top: 10.1em
+    left: 31em
+    #SVGDoc
+      width: 200px
+
 @media (max-width: 768px)
-	.mac
-		left: 5em
-	
-	
+  .mac
+    left: 3.5em
+    #SVGDoc
+      width: 400px
+  .iphone
+    top: 13em
+    left: 5em
+    #SVGDoc
+      width: 75px
+  .ipad
+    top: 5em
+    left: 20em
+    #SVGDoc
+      width: 200px
+
+
+@media (max-width: 580px)
+  .mobile-devices
+    display: none
+
+
+
