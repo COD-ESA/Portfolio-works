@@ -3,13 +3,13 @@ extends template/main
 mixin glava(title, str1, str2)
   .row.flex-column.text-black( style = {'font-family': 'Titillium Web , sans-serif'})
     h2.h2-responsive.mt-5.font-weight-normal.mr-auto.ml-auto.text-uppercase= title
-    p.col-7.ml-auto.mr-auto.mt-2.font-weight-normal.text-muted
+    p.col-7.mx-auto.mt-2.font-weight-normal.text-muted.text-center
       span.col-6= str1
       span= str2
 
 //- миксин прогресс-бар окружность
 mixin CardCickle(progress,proc,title)
-  .d-flex.flex-column.w-25.justify-content-center
+  .d-flex.mx-auto.mx-lg-0.flex-column.justify-content-center
     svg.progress-ring.mx-auto(width='150' height='150')
       circle.progress-ring__circle( fill="#b9f6ca" cx="75" cy="75" r="72" rd= progress)
       circle( fill="#7283a7"  cx="75" cy="75" r="69" )
@@ -166,15 +166,15 @@ block content
             //закрытие ul
             button.btn-lg.btn-outline-dark BIG BUTTON
   //закрытие container-fluid
-  .container-fluid( style = { 'background-color': fon, height: '73vh'})
-    .container.mx-auto( style = { 'background-color': fon, height: '4vh'})
+  .container-fluid( style = { 'background-color': fon})
+    .container.mx-auto( style = { 'background-color': fon})
       .row.w-100
         .col-xl-12.d-flex.mx-auto.justify-content-center.py-0
           h1.h2-responsive.font-weight-bold.text-black.align-self-center( style = {'font-family': 'Titillium Web , sans-serif'})
               | Services
       // close row
     // close container
-    .container.mt-5.px-0( style = { height: '64vh'})
+    .container.mt-5.px-0
       .container.bg-white.h-100
         .row.flex-column.text-black( style = {'font-family': 'Titillium Web , sans-serif'})
           h2.h2-responsive.mt-5.font-weight-bold.mr-auto.ml-auto SERVICES WE PROVIDE
@@ -185,21 +185,21 @@ block content
             |  Nulla facilisi. Sed gravi64 felis nec ipsum egestas, vitae blandit arcu finibus. Vestibulum
             |  rhoncus tempus odio, sodales cursus est egestas at.
         //Close row
-        .row.col-8.mr-auto.ml-auto.d-flex.justify-content-lg-center.flex-nowrap.text-center.pt-5
-          .card
+        .row.col-8.mr-auto.ml-auto.d-flex.flex-column.flex-lg-row.justify-content-lg-center.flex-nowrap.text-center.pt-5
+          .card.col-12.col-lg-4
             img( src = "../img/svg/global-communication.svg" alt = "not foto" style = { width: '10em;', height: '10em'}).card-img-top.mr-auto.ml-auto
             .card-body
               h6.font-weight-bold.card-title BRANDING
               p.lead.card-text( style = {'font-size': '0.7em'}).text-muted
                 |  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-          .card
+          .card.col-12.col-lg-4
             img( src = "../img/svg/money-bag.svg" alt = "not foto" style = { width: '10em;', height: '10em'}).mr-auto.ml-auto.card-img-top
             .card-body
               h6.font-weight-bold.card-title DESING
               p.lead.card-text.text-muted( style = { 'font-size': '0.7em'})
                 |  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
           // close card
-          .card
+          .card.col-12.col-lg-4
             img( src = "../img/svg/investment.svg" alt = " not foto " style = { width: '10em;', height: '10em'}).mr-auto.ml-auto.card-img-top
             .card-body
               h6.font-weight-bold.card-title DEVELOPMENT
@@ -210,7 +210,7 @@ block content
     //close container
   // close container-fluid
 
-  .container-fluid.pt-5( style = { 'background-color': fon, height: '65vh'})
+  .container-fluid.pt-5( style = { 'background-color': fon})
     .container.bg-white.h-100
       .row.flex-column.text-black.text-center( style = {'font-family': 'Titillium Web , sans-serif'})
         h2.h2-responsive.mt-5.font-weight-bold.mr-auto.ml-auto SERVICES WE PROVIDE
@@ -221,7 +221,7 @@ block content
           |  Nulla facilisi. Sed gravi64 felis nec ipsum egestas, vitae blandit arcu finibus. Vestibulum
           |  rhoncus tempus odio, sodales cursus est egestas at.
       //close row
-      .row.d-flex.justify-content-center.px-5.mt-5.pt-5
+      .row.d-flex.justify-content-center.px-5.mt-5.py-2.pt-lg-2
         .container.col-lg-5.d-flex.flex-column
 
           .container.d-flex.justify-content-end.mb-5
@@ -239,7 +239,7 @@ block content
                 |  Lorem ipsum dolor sit amet, stet facilisi ex vel, per te stet adipiscing persequeris
           // close container
         // close container
-        .container.col-lg-5.d-flex.flex-column
+        .container.col-lg-5.d-flex.flex-column.mt-5.mt-lg-0
 
           .container.d-flex.justify-content-start.mb-5
             .cicle.mr-3( style = { 'background-color': fon })
@@ -278,7 +278,7 @@ block content
           |  Nulla facilisi. Sed gravi64 felis nec ipsum egestas, vitae blandit arcu finibus. Vestibulum
           |  rhoncus tempus odio, sodales cursus est egestas at.
       // close row
-      .row.col-8.mr-auto.ml-auto.d-flex.justify-content-lg-center.flex-nowrap.text-center.pt-5
+      .row.col-8.mr-auto.ml-auto.d-flex.flex-column.flex-lg-row.justify-content-lg-center.flex-nowrap.text-center.pt-5
         .card
           img( src = "../img/svg/avatar.svg" alt = "not foto" style = { width: '11em;', height: '11em;','background-color': fon, 'border-radius': '50%'}).card-img-top.mr-auto.ml-auto
           .card-body.pb-0
@@ -289,7 +289,7 @@ block content
               img.mr-1( src = "../img/svg/facebook.svg" alt = "not foto" style = { width: '2em;', height: '2em;','background-color': fon, 'border-radius': '50%'})
               img.ml-1( src = "../img/svg/google-plus.svg" alt = "not foto" style = { width: '2em;', height: '2em;','background-color': 'fon;', 'border-radius': '50%'})
         // close card
-        .card
+        .card.my-4.my-lg-0
           img( src = "../img/svg/avatar.svg" alt = "not foto" style = { width: '11em;', height: '11em;','background-color': fon, 'border-radius': '50%'}).mr-auto.ml-auto.card-img-top
           .card-body.pb-0
             h6.font-weight-bold.card-title DESING
@@ -314,16 +314,16 @@ block content
 
    //.container-fluid( style = { 'background-color': fon, height: '65vh'})
   .container-fluid.pb-5( style = { 'background-color': fon})
-    .container.w-100.d-flex.justify-content-center( style = { 'background-color': fon, height: '12vh'})
+    .container.w-100.d-flex.justify-content-center( style = { 'background-color': fon})
       .row.d-flex.justify-content-center.align-items-center
         h1.h2-responsive.font-weight-bold.text-black( style = {'font-family': 'Titillium Web , sans-serif'})
             | Experince Components
       //close row
        //.container.bg-white( style = { height: '75%'})
-    .container.bg-white.pb-5
+    .container.bg-white.pb-5.d-flex.flex-column
       +glava('we got skills!', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut pulvinar augue.', 'Nulla facilisi. Sed gravi64 felis nec ipsum egestas, vitae blandit arcu finibus. Vestibulum rhoncus tempus odio, sodales cursus est egestas at.')
       //секция прогресс баров
-      .row.col-10.justify-content-around.mx-auto.mt-5
+      .row.col-10.d-flex.flex-column.flex-lg-row.justify-content-lg-around.mx-auto.mt-5
         +CardCickle('90','90%','web design')
         +CardCickle('75','75%','html / css')
         +CardCickle('70','70%','graphic design')
@@ -331,10 +331,10 @@ block content
       //close row
     // close container
   //close conteiner-fluid исправить высоту после отладки скрипта на 50vh
-  .container-fluid( style = { 'background-color': fon, height: '50vh'})
-    .container.bg-white( style = { height: '100%'})
+  .container-fluid( style = { 'background-color': fon})
+    .container.bg-white
       +glava('we got skills!', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut pulvinar augue.', 'Nulla facilisi. Sed gravi64 felis nec ipsum egestas, vitae blandit arcu finibus. Vestibulum rhoncus tempus odio, sodales cursus est egestas at.')
-      .row.h-25.d-flex.justify-content-around.align-items-center.mx-auto.px-5
+      .row.h-25.d-flex.justify-content-around.align-items-center.mx-auto.px-5.pb-5
 
         .col-5.d-flex.flex-column.justify-content-end.align-items-between
           +ProgressBar('100','100%','web design')
@@ -475,12 +475,37 @@ block content
         .col-xl-5
 
       //close row
+      .row.d-flex.justify-content-center.justify-content-lg-between
+        .col-12.col-sm-6.col-md-4.col-lg-3.d-flex.justify-content-center
+          .hameleon-2
+        .col-12.col-sm-6.col-md-4.col-lg-3.my-2.d-flex.justify-content-center
+          .hameleon-2
+        .col-12.col-sm-6.col-md-4.col-lg-3.my-2.d-flex.justify-content-center
+          .hameleon-2
+        .col-12.col-sm-6.col-md-4.col-lg-3.my-2.d-flex.justify-content-center
+          .hameleon-2
+        .col-12.col-sm-6.col-md-4.col-lg-3.d-flex.justify-content-center
+          .hameleon-2
+      //close row
+
+      .row.pt-3.pb-4.d-flex.justify-content-around
+        .col-4.px-0
+          h4.text-uppercase.text-left
+            strong lorem ipsum dollor
+        .col-4.px-0
+          h6.text-uppercase.text-muted.text-right 368 photos
+      //close row
       .row.d-flex.justify-content-center
-        .hameleon-2
-        .hameleon-2
-        .hameleon-2
-        .hameleon-2
-        .hameleon-2
+        .col-12.col-sm-6.col-md-4.col-lg-3.d-flex.justify-content-center
+          .hameleon-2
+        .col-12.col-sm-6.col-md-4.col-lg-3.my-2.d-flex.justify-content-center
+          .hameleon-2
+        .col-12.col-sm-6.col-md-4.col-lg-3.my-2.d-flex.justify-content-center
+          .hameleon-2
+        .col-12.col-sm-6.col-md-4.col-lg-3.my-2.d-flex.justify-content-center
+          .hameleon-2
+        .col-12.col-sm-6.col-md-4.col-lg-3.d-flex.justify-content-center
+          .hameleon-2
       //close row
       .row.pt-3.pb-4.d-flex.justify-content-around
         .col-4.px-0
@@ -490,25 +515,16 @@ block content
           h6.text-uppercase.text-muted.text-right 368 photos
       //close row
       .row.d-flex.justify-content-center
-        .hameleon-2
-        .hameleon-2
-        .hameleon-2
-        .hameleon-2
-        .hameleon-2
-      //close row
-      .row.pt-3.pb-4.d-flex.justify-content-around
-        .col-4.px-0
-          h4.text-uppercase.text-left
-            strong lorem ipsum dollor
-        .col-4.px-0
-          h6.text-uppercase.text-muted.text-right 368 photos
-      //close row
-      .row.d-flex.justify-content-center
-        .hameleon-2
-        .hameleon-2
-        .hameleon-2
-        .hameleon-2
-        .hameleon-2
+        .col-12.col-sm-6.col-md-4.col-lg-3.d-flex.justify-content-center
+          .hameleon-2
+        .col-12.col-sm-6.col-md-4.col-lg-3.my-2.d-flex.justify-content-center
+          .hameleon-2
+        .col-12.col-sm-6.col-md-4.col-lg-3.my-2.d-flex.justify-content-center
+          .hameleon-2
+        .col-12.col-sm-6.col-md-4.col-lg-3.my-2.d-flex.justify-content-center
+          .hameleon-2
+        .col-12.col-sm-6.col-md-4.col-lg-3.d-flex.justify-content-center
+          .hameleon-2
       //close row
       .row.pt-3.pb-4.d-flex.justify-content-around
         .col-4.px-0
