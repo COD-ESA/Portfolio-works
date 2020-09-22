@@ -26,13 +26,6 @@ mixin ProgressBar(progress,proc, title)
         line.svg-progress( x1="0" y1="10" x2="100%" y2="10" width="100%" height="20" proc= progress  )
 
 
-
-
-
-
-
-
-
 block content
   header
     .container
@@ -45,7 +38,7 @@ block content
               #navbarSupportedContent.collapse.navbar-collapse
                 ul.navbar-nav.ml-auto
                   li.nav-item
-                    a.text-light.color-link.nav-link(href='#')
+                    a.text-white.color-link.nav-link(href='#')
                       |  HOME
                   li.nav-item
                     a.text-light.color-link.nav-link(href='#')
@@ -315,7 +308,7 @@ block content
    //.container-fluid( style = { 'background-color': fon, height: '65vh'})
   .container-fluid.pb-5( style = { 'background-color': fon})
     .container.w-100.d-flex.justify-content-center( style = { 'background-color': fon})
-      .row.d-flex.justify-content-center.align-items-center
+      .row.d-flex.justify-content-center.align-items-center.py-5
         h1.h2-responsive.font-weight-bold.text-black( style = {'font-family': 'Titillium Web , sans-serif'})
             | Experince Components
       //close row
@@ -725,35 +718,112 @@ block content
 
       //close row
     //close container
-
   //close container-fluid
 
+  //section contact companetion
+  .container-fluid.d-flex.justify-content-center.flex-column( style = { 'background-color': fon})
+    .container
+      .row.d-flex.justify-content-center.py-5
+        h3.responsive.font-weight-bold Contact Components
+      //close row 
+    //close container
+    .container.bg-white.d-flex.flex-column.py-3
+      .row.d-flex.justify-content-center
+        h3.responsive.font-weight-bold.text-uppercase.py-3 get in touch
 
+      .row.d-flex.justify-content-center
+        .col-12.col-lg-6.d-flex.flex-column.mb-2.mb-lg-0
+          form.text-center.border.border-light.p-5(action='#!')
+            p.h4.mb-4 Contact us
+            // Name
+            input#defaultContactFormName.form-control.mb-4(type='text' placeholder='Name')
+            // Email
+            input#defaultContactFormEmail.form-control.mb-4(type='email' placeholder='E-mail')
+            // Subject
+            label Subject
+            select.browser-default.custom-select.mb-4
+              option(value='' disabled='') Choose option
+              option(value='1' selected='') Feedback
+              option(value='2') Report a bug
+              option(value='3') Feature request
+              option(value='4') Feature request
+            // Message
+            .form-group
+              textarea#exampleFormControlTextarea2.form-control.rounded-0(rows='3' placeholder='Message')
+            // Copy
+            .custom-control.custom-checkbox.mb-4
+              input#defaultContactFormCopy.custom-control-input(type='checkbox')
+              label.custom-control-label(for='defaultContactFormCopy') Send me a copy of this message
+            // Send button
+            button.btn.btn-info.btn-block(type='submit') Send
+          //close form
+        //close col
+        .col-12.col-lg-6.d-flex.flex-column
+          p.text-left
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
 
+          p.text-left.py-3
+            strong.font-weight-bold
+              | 1600 Pensylvania Ave NW, Washington, DC 20500, UNITED States of America.
 
+          p.text-left
+            strong.font-weight-bold
+              | T: (202) 456-1111
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+          p.text-left
+            strong.font-weight-bold
+              |  M: (202) 456-1212
+          p.text-left
+            img(src="../img/f.png")
+            img.mx-3(src="../img/t.png")
+            img(src="../img/g.png")
+        //close col
       //close row
     //close container
-  // close container-fluid
+  //close container-fluid
+
+  //section №-1 footers
+  .container-fluid.d-flex.justify-content-center.flex-column.pt-5.pb-3( style = { 'background-color': fon})
+    .container.bg-white.mt-5
+      .row.d-flex.justify-content-between.py-3
+        .col-12.col-lg-5
+          h3.text-center.text-lg-left.ml-lg-5.responsive.font-weight-bold LOGO
+        //close col
+        .col-12.col-lg-7.d-flex.justify-content-around
+          ul.nav
+            li.nav-item
+              a.nav-link.text-uppercase.text-decoration-none.text-dark.font-weight-bold(href="#") facebook
+            li.nav-item
+              a.nav-link.text-uppercase.text-decoration-none.text-dark.font-weight-bold(href="#")  twitter
+            li.nav-item
+              a.nav-link.text-uppercase.text-decoration-none.text-dark.font-weight-bold(href="#")  google+
+            li.nav-item
+              a.nav-link.text-uppercase.text-decoration-none.text-dark.font-weight-bold(href="#") linkedin
+          //close ul
+        //close col
+      //close row
+    //close container
+  //container-fluid
+
+  //section №-2 footers - continue
+  .container-fluid.d-flex.justify-content-center( style = { 'background-color': fon})
+    .container(style = {background: "#405565"})
+      .row.d-flex.justify-content-between.align-items-center.py-4
+        .col-6.d-flex.align-items-center.py-auto
+          p.text-left.lead.text-white.my-0
+            | &copy 2020 GraphicBurger. All rights reserved.
+        //close col-10
+        .col-6
+          p.text-right.my-0
+            img( src="../img/point-track.png")
+        //close col-10        
+      //close row
+    //close container
+  //close container-fluid
+
+  //section №-34 footers - continue
+
+
 
 prepend scripts
   script( src=path_js + "script_index.js" )
